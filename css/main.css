@@ -6,8 +6,34 @@
 
 
 #banner {
-  height: 100vh;
-  background-image: url("../images/banner.jpg");
+  height: 50vh;
+  background-image: url("../images/pic05.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  #banner {
+    background-image: url("../images/banner.jpg");
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 768px) {
+
 }
