@@ -8,6 +8,7 @@
 #banner {
   height: 50vh;
   background-image: url("../images/pic05.jpg");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -18,22 +19,24 @@
   color: #fff;
 }
 
-
-
+/*
+TABLET
+*/
 @media (min-width: 768px) {
 }
-
+/*
+laptop
+*/
 @media (min-width: 992px) {
   #banner {
     background-image: url("../images/banner.jpg");
   }
 
 }
+/*
+computer
+*/
 
 @media (min-width: 1200px) {
-
-}
-
-@media (min-width: 768px) {
 
 }
