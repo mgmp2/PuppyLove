@@ -1,0 +1,29 @@
+{
+  "name": "puppylove",
+  "version": "1.0.0",
+  "description": "Puppy Love es una organización que busca un hogar para cada puppy",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgmp2/PuppyLove.git"
+  },
+  "keywords": [
+    "npm",
+    "html",
+    "css",
+    "sass"
+  ],
+  "author": "Miriam Mendoza <miriammp1997@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgmp2/PuppyLove/issues"
+  },
+  "homepage": "https://github.com/mgmp2/PuppyLove#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
