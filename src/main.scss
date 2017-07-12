@@ -11,13 +11,22 @@
 colors
 */
 $color-info: rgb(38, 196, 196);
-$color-description: rgba(48, 42, 50, 0.82);
+$color-description: rgb(48, 42, 50);
+$color-comodidad: #6739c7;
 /*
 GENERAL
 */
-section {
+%pad-top-bot {
   padding-top: 42px;
   padding-bottom: 42px;
+}
+%flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section {
+  @extend %pad-top-bot;
 }
 h1{
   border-top: 2px solid #fff;
@@ -26,20 +35,31 @@ h1{
   padding: 7px 14px;
   font-size: 1.8rem;
 }
-
-#banner {
-  height: 56vh;
-  background-image: url("../images/pic05.jpg");
-  // background-attachment: fixed;
+h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+body {
+  background-image: url(../images/pic05.jpg);
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-position-x: -23vw;
+  background-position-y: -17vh;
+  background-size: 120vw;
+  -webkit-background-size: 120vw;
+  -moz-background-size: 120vw;
+  -o-background-size: 120vw;
+}
+p {
+  line-height: 1.8;
+}
+#banner {
+  @extend %flex;
+  height: 56vh;
+
+
   flex-direction: column;
   a.waves-effect.waves-light.btn-large {
     width: 80vw;
@@ -48,12 +68,7 @@ h1{
 #info {
   background: $color-info;
   height: 60vh;
-  h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    font-weight: 700;
-  }
+
   img {
     margin-right: 14px;
     margin-left: 14px;
@@ -62,8 +77,39 @@ h1{
 #description {
   background: $color-description;
   padding: 0;
-  img {
-    width: 96.5vw;
+  .row {
+    margin-bottom: 0;
+    [class*="s12"] {
+      @extend %pad-top-bot;
+    }
+    img {
+      padding: 0!important;
+    }
+  }
+}
+#comodidad {
+  background: $color-comodidad;
+  [class*="s12"] {
+    @extend %pad-top-bot;
+  }
+}
+#importante {
+  background: rgba(255, 255, 255, 0);
+  background-image: url(../images/pic05.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+footer {
+  @extend %pad-top-bot;
+  background: $color-description;
+  span {
+    font-size: 16px!important;
+    margin: 0 11px;
+    color: rgb(189, 189, 189);
   }
 }
 /*
@@ -79,6 +125,9 @@ laptop
     height: 100vh;
     background-image: url("../images/banner.jpg");
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
   }
 
 }
