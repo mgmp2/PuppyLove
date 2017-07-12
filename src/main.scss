@@ -1,24 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+/*
+colors
+*/
+$color-info: rgb(38, 196, 196);
+$color-description: rgba(48, 42, 50, 0.82);
+/*
+GENERAL
+*/
+section {
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+h1{
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding: 7px 14px;
+  font-size: 1.8rem;
 }
 
-
 #banner {
-  height: 50vh;
+  height: 56vh;
   background-image: url("../images/pic05.jpg");
-  background-attachment: fixed;
+  // background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: #fff;
+  a.waves-effect.waves-light.btn-large {
+    width: 80vw;
+  }
 }
-
+#info {
+  background: $color-info;
+  height: 60vh;
+  h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+  img {
+    margin-right: 14px;
+    margin-left: 14px;
+  }
+}
+#description {
+  background: $color-description;
+  padding: 0;
+  img {
+    width: 96.5vw;
+  }
+}
 /*
 TABLET
 */
@@ -29,7 +76,9 @@ laptop
 */
 @media (min-width: 992px) {
   #banner {
+    height: 100vh;
     background-image: url("../images/banner.jpg");
+    background-attachment: fixed;
   }
 
 }
